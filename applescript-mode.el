@@ -292,11 +292,9 @@ contain this package.")
          ["AppleScript Version"   as-language-version t])))
 
 ;;;###autoload
-(defun applescript-mode ()
-  "Major mode for editing AppleScript files."
-  (interactive)
+(define-derived-mode applescript-mode prog-mode "AppleScript"
   ;; set up local variables
-  (kill-all-local-variables)
+  ;; (kill-all-local-variables)
   (make-local-variable 'font-lock-defaults)
   (make-local-variable 'paragraph-separate)
   (make-local-variable 'paragraph-start)
